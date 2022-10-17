@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>
-        Hello Viktor
-    </h1>
+    {% for post in post_list %}
+    <div class="post-entry">
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.body }}</p>
+    </div>
+    {% endfor %}
 {% endblock content%}

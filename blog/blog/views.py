@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
-from .models import Blog
+from .models import Post
 
 class HomePageView(ListView):
-    model = Blog()
-    view = "home.html"
+    model = Post
+    template_name = "home.html"
 
 
 # Create your views here.
